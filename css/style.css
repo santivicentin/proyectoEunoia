@@ -1,0 +1,264 @@
+/* estilos generales */
+*{
+    font-family: "Noto Sans JP", sans-serif;
+    margin: 0;
+    padding: 0%;
+    box-sizing: border-box;
+     
+}
+
+ul{
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    margin-top: 0.1rem;
+    /*margin-left: 24rem;*/
+    align-items: center;
+    /* gap: 0.5rem; */
+
+}
+.logo{
+    width: 8rem;
+}
+
+html, body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  background-color: rgb(230, 226, 215);
+}
+
+
+/* estilos header  */
+
+.navbar-mobile {
+  display: block;
+}
+.navbar-desktop {
+  display: none;
+}
+
+.index-header{
+    background-color: rgb(230, 226, 215);
+    padding: 1rem 0;
+    height: auto; /*es el porcentaje de pantalla que quiero que ocupe*/
+}
+
+.index-header-flex{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+}
+
+
+.navegacion-superior ul li a{
+    /* aca veo si le quiero dar un estilo a los items */  
+text-decoration: none;
+color: #000000;
+margin-left: 0.9rem;
+
+
+}
+
+/*estilo main*/
+main {
+  flex: 1;
+ 
+}
+.nueva-temporada{
+    background-image: url(../imgs/fondo\ nueva\ temporada.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    height: 100vh;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 1rem;
+
+} 
+.contenido{
+  text-align: center;
+}
+.titulo {
+  color: rgb(230, 226, 215);
+  font-size: 2rem;
+  font-weight: bold;
+  line-height: 1;
+}
+
+.subtitulo {
+  color: rgb(230, 226, 215);
+  font-size: 1rem;
+  letter-spacing: 1px;
+  margin-bottom: 1rem;
+}
+
+.boton{
+ border: none;
+ width: 100%;
+ max-width: 15rem;
+ padding: 0.5rem;
+ background-color: #ffff;
+ color: #000000;
+ cursor: pointer;
+ text-decoration: none;
+}
+
+.look{ 
+    text-align: center;
+    font-size: 1.3rem;
+    margin: 1.5rem 0;
+}
+
+.contenedor-Cards{
+    display: flex;
+    /*flex-wrap: wrap;*/
+    flex-direction: column;
+    align-items: center;
+    /*gap: 1.25rem;*/
+    gap: 1.5rem;
+    padding: 1rem;
+    /*justify-content: center;*/
+}
+
+
+.card-ropa{
+    /*width: 18rem; */
+    background: #ffff;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100%;
+    min-width: 200px;
+    width: 90%;
+    padding: 1rem;
+    box-shadow: 0 0 5px #0000001a;
+}
+.card-ropa img{
+    width: 100%;
+    height: 300px; 
+    object-fit: cover;
+    
+}
+
+.card-ropa-precio span{
+ color: rgb(92, 92, 92);
+ font-size: 0.8rem;
+}
+
+.card-ropa h3, .card-ropa-precio span,.card-ropa-precio p,.card-ropa button {
+  /*margin: 0;
+  padding: 0;*/
+  margin: 0.2rem 0;
+  border: none;
+}
+
+/*style sobre nosotras*/
+.quienes_somos{
+    font-size: 1.5rem;
+}
+.presentacion{
+    font-size: 0.9rem;
+    /*width: 60rem;*/
+    width: 90%;
+    margin: 0 auto;
+}
+
+/*contacto*/
+.contactos{
+    padding-left: 1rem;
+    font-size: 0.9rem;
+}
+.quienes_somos_presentacion {
+  font-size: 0.9rem;
+  width: 90%;
+  max-width: 60rem;
+  margin: 0 auto;
+  text-align: left; 
+}
+/*.quienes_somos{
+    padding-left: 1rem;
+    font-size: 0.9rem;
+}*/
+.whatsapp{
+text-decoration: none;
+color: #000000;
+
+}
+
+/*footer*/
+footer{
+    text-align: center;
+    padding: 1rem 0;
+}
+.logoinstagram{
+    width: 2rem;
+}
+.whatsapp{
+    text-decoration: none;
+    color: #000000;
+}
+
+/* min-width y max-width: 30rem ------> es para que 
+se ajuste automaticamente entre esos parametros */
+
+
+@media screen and (min-width: 701px) {
+  ul {
+    flex-direction: row;
+    justify-content: center;
+
+    gap: 2rem;
+  }
+
+  .index-header-flex {
+    flex-direction: row;
+    
+    justify-content: space-between;
+    padding: 0 2rem;
+  }
+  .navbar-mobile {
+    display: none;
+  }
+  .navbar-desktop {
+    display: block;
+  }
+}
+
+  .contenedor-Cards {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+
+  .card-ropa {
+    width: 18rem;
+    min-height: 500px;
+  }
+
+  .presentacion {
+  width: 90%;
+  max-width: 60rem;
+  font-size: 1rem;
+  margin: 0 auto;
+}
+
+
+  .titulo {
+    font-size: 3rem;
+}
+
+  .subtitulo {
+    font-size: 1.2rem;
+}
+
+

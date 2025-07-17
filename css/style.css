@@ -6,7 +6,7 @@
 
 @font-face {
   font-family: "fuente_charm";
-  src: url("../../fuente/fuente_charm.ttf") format("truetype");
+  src: url("/fuente/fuente_charm.ttf") format("truetype");
   font-weight: normal;
   font-style: normal;
 }

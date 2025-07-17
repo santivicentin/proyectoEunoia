@@ -1,0 +1,38 @@
+/* Footer */
+footer {
+  padding: 1rem 0;
+  display: flex;
+  justify-content: flex-start;
+  padding-left: 1rem;
+  background-color: $color-beige-oscuro;
+}
+
+.footer-contenido {
+  @extend %flex-column-center;
+}
+
+.logoinstagram {
+  width: 2rem;
+}
+
+.whatsapp-fijo {
+  position: fixed;
+  bottom: 1.5rem;
+  right: 1.5rem;
+  width: 3.2rem;
+  height: 3.2rem;
+  background-color: $color-blanco;
+  border-radius: 100%;
+  z-index: 1000;
+
+  img {
+    width: 100%;
+    height: auto;
+    display: block;
+  }
+
+  &:hover {
+    transform: scale(1.1);
+    transition: transform 0.3s ease;
+  }
+}

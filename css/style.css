@@ -1,30 +1,37 @@
-/* estilos generales */
-*{
-    font-family: "Noto Sans JP", sans-serif;
-    margin: 0;
-    padding: 0%;
-    box-sizing: border-box;
-     
+.footer-contenido, .contacto-wrapper, .quienes_somos, .nueva-temporada, .index-header-flex {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
-ul{
-    list-style: none;
-    display: flex;
-    flex-direction: column;
-    margin-top: 0.1rem;
-    /*margin-left: 24rem;*/
-    align-items: center;
-    /* gap: 0.5rem; */
-
+@font-face {
+  font-family: "fuente_charm";
+  src: url("../../fuente/fuente_charm.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
 }
-.logo{
-    width: 8rem;
+/* Estilos generales */
+* {
+  font-family: "Montserrat", sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+ul {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  margin-top: 0.1rem;
+  align-items: center;
+}
+
+.logo {
+  width: 10rem;
 }
 
 html, body {
   height: 100%;
-  margin: 0;
-  padding: 0;
 }
 
 body {
@@ -33,61 +40,150 @@ body {
   background-color: rgb(230, 226, 215);
 }
 
+/* Header */
+.index-header {
+  background-color: rgb(230, 226, 215);
+  padding: 1rem 0;
+  height: auto;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 100;
+  transition: background-color 0.3s ease;
+}
+.index-header.scroll-activo {
+  background-color: rgb(214, 210, 200);
+}
 
-/* estilos header  */
+.index-header-flex {
+  gap: 1rem;
+}
 
-.navbar-mobile {
+.navbar-nav {
+  gap: 1rem;
+  padding-left: 1rem;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.navbar-collapse {
+  text-align: left;
+}
+
+.navbar-toggler {
+  border: none !important;
+  outline: none !important;
+  box-shadow: none !important;
+  background-color: transparent !important;
+  border-radius: 0 !important;
+  padding: 0 !important;
+}
+
+.custom-toggler {
+  width: 30px;
+  height: 24px;
+  position: relative;
+  border: none;
+  background: transparent;
+  padding: 0;
+  z-index: 1051;
+}
+
+.custom-toggler .line {
+  background-color: #333;
+  height: 2px;
+  width: 100%;
   display: block;
-}
-.navbar-desktop {
-  display: none;
-}
-
-.index-header{
-    background-color: rgb(230, 226, 215);
-    padding: 1rem 0;
-    height: auto; /*es el porcentaje de pantalla que quiero que ocupe*/
+  position: absolute;
+  left: 0;
+  transition: all 0.3s ease;
 }
 
-.index-header-flex{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 1rem;
+.line1 {
+  top: 0;
 }
 
-
-.navegacion-superior ul li a{
-    /* aca veo si le quiero dar un estilo a los items */  
-text-decoration: none;
-color: #000000;
-margin-left: 0.9rem;
-
-
+.line2 {
+  top: 10px;
 }
 
-/*estilo main*/
+.line3 {
+  top: 20px;
+}
+
+.custom-toggler.open .line1 {
+  transform: rotate(45deg);
+  top: 10px;
+}
+
+.custom-toggler.open .line2 {
+  opacity: 0;
+}
+
+.custom-toggler.open .line3 {
+  transform: rotate(-45deg);
+  top: 10px;
+}
+
+.index-header .container {
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* Main */
 main {
   flex: 1;
- 
+  padding-top: 8rem;
 }
-.nueva-temporada{
-    background-image: url(../imgs/fondo\ nueva\ temporada.png);
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: center;
-    height: 100vh;
-    justify-content: center;
-    align-items: center;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    padding: 1rem;
 
-} 
-.contenido{
-  text-align: center;
+.nueva-temporada {
+  background-image: url(../imgs/fondo\ nueva\ temporada.png);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  height: 100vh;
+  padding: 1rem;
+  justify-content: center;
 }
+
+.banner-nueva-coleccion {
+  background-image: url(../imgs/banner_charm1.png);
+  position: relative;
+  width: 100%;
+  height: 170px;
+  background-size: cover;
+  background-position: center;
+  color: #000;
+  font-family: "fuente_charm", sans-serif;
+  overflow: hidden;
+}
+.banner-nueva-coleccion .texto-izquierda {
+  position: absolute;
+  top: 0.5rem;
+  left: 1rem;
+  font-size: 3.5rem;
+  margin: 0;
+  font-family: "fuente_charm", sans-serif;
+}
+.banner-nueva-coleccion .texto-derecha {
+  position: absolute;
+  bottom: 1rem;
+  right: 1rem;
+  font-size: 3.5rem;
+  margin: 0;
+  font-family: "fuente_charm", sans-serif;
+}
+.banner-nueva-coleccion .creditos-banner {
+  position: absolute;
+  bottom: 0.3rem;
+  left: 50%;
+  transform: translateX(-50%);
+  font-family: "Montserrat", sans-serif;
+  font-size: 0.8rem;
+  margin: 0;
+}
+
 .titulo {
   color: rgb(230, 226, 215);
   font-size: 2rem;
@@ -102,163 +198,238 @@ main {
   margin-bottom: 1rem;
 }
 
-.boton{
- border: none;
- width: 100%;
- max-width: 15rem;
- padding: 0.5rem;
- background-color: #ffff;
- color: #000000;
- cursor: pointer;
- text-decoration: none;
-}
-
-.look{ 
-    text-align: center;
-    font-size: 1.3rem;
-    margin: 1.5rem 0;
-}
-
-.contenedor-Cards{
-    display: flex;
-    /*flex-wrap: wrap;*/
-    flex-direction: column;
-    align-items: center;
-    /*gap: 1.25rem;*/
-    gap: 1.5rem;
-    padding: 1rem;
-    /*justify-content: center;*/
-}
-
-
-.card-ropa{
-    /*width: 18rem; */
-    background: #ffff;
-    flex-direction: column;
-    justify-content: space-between;
-    height: 100%;
-    min-width: 200px;
-    width: 90%;
-    padding: 1rem;
-    box-shadow: 0 0 5px #0000001a;
-}
-.card-ropa img{
-    width: 100%;
-    height: 300px; 
-    object-fit: cover;
-    
-}
-
-.card-ropa-precio span{
- color: rgb(92, 92, 92);
- font-size: 0.8rem;
-}
-
-.card-ropa h3, .card-ropa-precio span,.card-ropa-precio p,.card-ropa button {
-  /*margin: 0;
-  padding: 0;*/
-  margin: 0.2rem 0;
+.boton {
   border: none;
+  width: 100%;
+  max-width: 15rem;
+  padding: 0.5rem;
+  background-color: #ffffff;
+  color: #000000;
+  cursor: pointer;
+  text-decoration: none;
 }
 
-/*style sobre nosotras*/
-.quienes_somos{
-    font-size: 1.5rem;
-}
-.presentacion{
-    font-size: 0.9rem;
-    /*width: 60rem;*/
-    width: 90%;
-    margin: 0 auto;
+.look {
+  text-align: center;
+  font-size: 1.3rem;
+  margin: 1.9rem 0 1.5rem;
 }
 
-/*contacto*/
-.contactos{
-    padding-left: 1rem;
-    font-size: 0.9rem;
+.contenedor-Cards {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 1rem;
+  padding: 0.5rem;
 }
+
+.card-ropa {
+  width: 48%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  background: #ffffff;
+  padding: 0.5rem;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.1019607843);
+  border-radius: 6px;
+  width: calc(50% - 0.5rem);
+  min-height: auto;
+}
+
+.card-ropa img {
+  width: 100%;
+  aspect-ratio: 3/4;
+  object-fit: cover;
+}
+
+.card-ropa-precio span {
+  color: rgb(92, 92, 92);
+  font-size: 0.7rem;
+}
+
+.card-ropa h3, .card-ropa-precio p {
+  margin-top: 0.5rem;
+  font-size: 0.8rem;
+}
+
+.card-ropa button {
+  margin-top: auto;
+  padding: 0.3rem;
+  border: none;
+  background-color: rgb(230, 226, 215);
+  color: #000000;
+  cursor: pointer;
+  border-radius: 4px;
+}
+
+/* Sobre nosotras */
+.quienes_somos {
+  gap: 2rem;
+  margin: 4rem 0;
+  padding: 0 1.5rem;
+}
+
+.quienes_somos_presentacion {
+  font-size: 2rem;
+}
+
+.presentacion {
+  font-size: 0.9rem;
+  width: 90%;
+  margin: 0 auto;
+}
+
+/* Contacto */
+.contacto-wrapper {
+  gap: 2rem;
+  margin: 2rem 0;
+  padding: 0 1.5rem;
+}
+.contacto-wrapper .contacto-info {
+  max-width: 300px;
+}
+.contacto-wrapper .contacto-info .contacto-grupo {
+  margin-bottom: 1rem;
+}
+.contacto-wrapper .contacto-info .contacto-grupo p {
+  margin: 0.2rem 0;
+}
+.contacto-wrapper .contacto-info .contacto-grupo a.whatsapp {
+  color: #000000;
+  text-decoration: none;
+}
+
+.contacto-form {
+  display: flex;
+  flex-direction: column;
+  gap: 1.2rem;
+}
+.contacto-form label {
+  display: flex;
+  flex-direction: column;
+}
+.contacto-form label span {
+  font-size: 0.8rem;
+  text-transform: uppercase;
+  letter-spacing: 0.05rem;
+  margin-bottom: 0.3rem;
+}
+.contacto-form label input,
+.contacto-form label textarea {
+  padding: 0.6rem;
+  border: 1px solid #999999;
+  background: #ffffff;
+  border-radius: 4px;
+  font-family: inherit;
+  font-size: 0.9rem;
+}
+.contacto-form button {
+  align-self: flex-start;
+  padding: 0.6rem 1.5rem;
+  border: none;
+  background: #000000;
+  color: #ffffff;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
 .quienes_somos_presentacion {
   font-size: 0.9rem;
   width: 90%;
   max-width: 60rem;
   margin: 0 auto;
-  text-align: left; 
-}
-/*.quienes_somos{
-    padding-left: 1rem;
-    font-size: 0.9rem;
-}*/
-.whatsapp{
-text-decoration: none;
-color: #000000;
-
+  text-align: left;
 }
 
-/*footer*/
-footer{
-    text-align: center;
-    padding: 1rem 0;
-}
-.logoinstagram{
-    width: 2rem;
-}
-.whatsapp{
-    text-decoration: none;
-    color: #000000;
+.whatsapp {
+  text-decoration: none;
+  color: #000000;
 }
 
-/* min-width y max-width: 30rem ------> es para que 
-se ajuste automaticamente entre esos parametros */
+/* Footer */
+footer {
+  padding: 1rem 0;
+  display: flex;
+  justify-content: flex-start;
+  padding-left: 1rem;
+  background-color: rgb(214, 210, 200);
+}
 
+.logoinstagram {
+  width: 2rem;
+}
 
+.whatsapp-fijo {
+  position: fixed;
+  bottom: 1.5rem;
+  right: 1.5rem;
+  width: 3.2rem;
+  height: 3.2rem;
+  background-color: #ffffff;
+  border-radius: 100%;
+  z-index: 1000;
+}
+.whatsapp-fijo img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+.whatsapp-fijo:hover {
+  transform: scale(1.1);
+  transition: transform 0.3s ease;
+}
+
+/* Media Queries */
 @media screen and (min-width: 701px) {
   ul {
     flex-direction: row;
     justify-content: center;
-
     gap: 2rem;
   }
-
   .index-header-flex {
     flex-direction: row;
-    
     justify-content: space-between;
     padding: 0 2rem;
   }
-  .navbar-mobile {
-    display: none;
-  }
-  .navbar-desktop {
-    display: block;
-  }
-}
-
   .contenedor-Cards {
-    flex-direction: row;
-    flex-wrap: wrap;
     justify-content: center;
   }
-
-
   .card-ropa {
     width: 18rem;
     min-height: 500px;
   }
-
+  .contacto-wrapper {
+    flex-direction: row;
+    align-items: flex-start;
+  }
+  .contacto-form {
+    flex: 1;
+  }
+  .quienes_somos_presentacion {
+    font-size: 1.5rem;
+  }
   .presentacion {
-  width: 90%;
-  max-width: 60rem;
-  font-size: 1rem;
-  margin: 0 auto;
-}
-
-
+    font-size: 1rem;
+  }
   .titulo {
     font-size: 3rem;
-}
-
+  }
   .subtitulo {
     font-size: 1.2rem;
+  }
+  .banner-nueva-coleccion {
+    height: 300px;
+  }
+  .texto-izquierda {
+    font-size: 8rem !important;
+  }
+  .texto-derecha {
+    font-size: 8rem !important;
+    bottom: 1rem;
+  }
+  .creditos-banner {
+    font-size: 1rem;
+  }
 }
 
-
+/*# sourceMappingURL=style.css.map */

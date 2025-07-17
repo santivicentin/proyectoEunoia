@@ -10,47 +10,47 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@100..900&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="../css/style.css">
 </head>
 <body>
    <header class="index-header">
-     <div class="index-header-flex">
-        <a href="../index.html"><img class="logo" src="../imgs/logo (1).png" alt="logotipo eunoia" ></a>
-        <nav class="navbar navbar-expand-lg navbar-mobile">
-  <div class="container-fluid">
-    <a class="navbar-brand" href="#">Categorias</a>
-    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon"></span>
-    </button>
-    <div class="collapse navbar-collapse" id="navbarSupportedContent">
-      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-        <li class="nav-item">
-          <a class="nav-link active" aria-current="page" href="../index.html">INICIO</a>
-          <a class="nav-link active" aria-current="page" href="./indumentaria.html">INDUMENTARIA</a>
-          <a class="nav-link active" aria-current="page" href="./accesorios.html">ACCESORIOS</a>
-          <a class="nav-link active" aria-current="page" href="./todo.html">VER TODO</a>
-          <a class="nav-link active" aria-current="page" href="./contacto.html">CONTACTO</a>
-          <a class="nav-link active" aria-current="page" href="./nosotras.html">SOBRE NOSOTRAS</a>
-          
-        </li>
-        
-      </ul>
-    </div>
+  <div class="container d-flex justify-content-between align-items-center py-2">
+    
+    <a href="../index.html">
+      <img class="logo" src="../imgs/logo (1).png" alt="logotipo eunoia">
+    </a>
+
+    
+    <nav class="navbar p-0">
+      <div class="container-fluid p-0">
+       
+        <button
+        class="navbar-toggler custom-toggler" type="button" data-bs-toggle="collapse"
+        data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+        aria-expanded="false" aria-label="Toggle navigation"
+        >
+        <span class="line line1"></span>
+        <span class="line line2"></span>
+        <span class="line line3"></span>
+        </button>
+
+
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+
+            <li class="nav-item"><a class="nav-link" href="../index.html">INICIO</a></li>
+            <li class="nav-item"><a class="nav-link" href="./indumentaria.html">INDUMENTARIA</a></li>
+            <li class="nav-item"><a class="nav-link" href="./accesorios.html">ACCESORIOS</a></li>
+            <li class="nav-item"><a class="nav-link" href="./todo.html">VER TODO</a></li>
+            <li class="nav-item"><a class="nav-link" href="./contacto.html">CONTACTO</a></li>
+            <li class="nav-item"><a class="nav-link" href="./nosotras.html">SOBRE NOSOTRAS</a></li>
+          </ul>
+        </div>
+      </div>
+    </nav>
   </div>
-</nav>
-        <nav class="navegacion-superior navbar-desktop">
-            <ul>
-                <li><a href="../index.html">INICIO</a></li>
-                <li><a href="./indumentaria.html">INDUMENTARIA</a></li>
-                <li><a href="./accesorios.html">ACCESORIOS</a></li>
-                <li><a href="./todo.html">VER TODO</a></li>
-                <li><a href="./contacto.html">CONTACTO</a></li>
-                <li><a href="./nosotras.html">SOBRE NOSOTRAS</a></li>
-            </ul>
-        </nav>
-    </div>
-   </header> 
+</header>
    
    <main>
     <div class="contenedor-Cards">
@@ -270,10 +270,40 @@
    </main>
 
    <footer>
- <p>Seguinos!</p>
+    <div class="footer-contenido">
+    <p>Seguinos!</p>
     <a href="https://www.instagram.com/eunoiafranck"  target="_blank"><img src="../imgs/logoinstagram.png" alt="logoinstagram" class="logoinstagram"></a>
-   </footer>
+    </div>
 
    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js" integrity="sha384-ndDqU0Gzau9qJ1lfW4pNLlhNTkCfHzAVBReH9diLvGRem5+R9g2FzA8ZGN954O5Q" crossorigin="anonymous"></script>
+
+   <script>
+  document.addEventListener("DOMContentLoaded", function () {
+    const toggler = document.querySelector(".custom-toggler");
+    const navbarCollapse = document.getElementById("navbarSupportedContent");
+
+    toggler.addEventListener("click", function () {
+      toggler.classList.toggle("open");
+    });
+
+    
+    navbarCollapse.addEventListener("hidden.bs.collapse", function () {
+      toggler.classList.remove("open");
+    });
+
+    
+    navbarCollapse.addEventListener("shown.bs.collapse", function () {
+      toggler.classList.add("open");
+    });
+  });
+</script>
+
+<a href="https://api.whatsapp.com/send/?phone=5493424081254&text=Hola!%20Estoy%20interesadx%20en%20un%20producto" 
+   class="whatsapp-fijo" 
+   target="_blank" 
+   aria-label="Chatear por WhatsApp">
+  <img src="../imgs/whatsapplogo.png" alt="WhatsApp" />
+</a>
+
 </body>
 </html>

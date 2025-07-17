@@ -1,0 +1,67 @@
+/* Media Queries */
+@media screen and (min-width: 701px) {
+  ul {
+    flex-direction: row;
+    justify-content: center;
+    gap: 2rem;
+  }
+
+  .index-header-flex {
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 0 2rem;
+  }
+
+  .contenedor-Cards {
+    justify-content: center;
+  }
+
+  .card-ropa {
+    width: 18rem;
+    min-height: 500px;
+  }
+
+  .contacto-wrapper {
+    flex-direction: row;
+    align-items: flex-start;
+  }
+
+  .contacto-form {
+    flex: 1;
+  }
+
+  .quienes_somos_presentacion {
+    font-size: 1.5rem;
+  }
+
+  .presentacion {
+    font-size: 1rem;
+  }
+
+  .titulo {
+    font-size: 3rem;
+  }
+
+  .subtitulo {
+    font-size: 1.2rem;
+  }
+
+  .banner-nueva-coleccion {
+    height: 300px;
+  }
+  
+   .texto-izquierda {
+      font-size: 8rem !important;
+    }
+
+    .texto-derecha {
+      font-size: 8rem !important;
+       bottom: 1rem;
+      
+    }
+
+    .creditos-banner {
+      font-size: 1rem;
+    }
+  
+}

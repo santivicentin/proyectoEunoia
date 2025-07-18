@@ -332,9 +332,9 @@ main {
 .fondo-nosotras .quienes_somos {
   position: relative;
   z-index: 1;
-  gap: 2rem;
-  padding: 7rem 12rem;
-  text-align: left;
+  gap: 0.1rem;
+  padding: 2.3rem 1rem;
+  text-align: justify;
   color: white;
 }
 
@@ -346,6 +346,7 @@ main {
   font-size: 0.9rem;
   width: 90%;
   margin: 0 auto;
+  text-align: justify;
 }
 
 /* Contacto */
@@ -474,8 +475,23 @@ footer {
   .contacto-form {
     flex: 1;
   }
+  .quienes_somos {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 2rem;
+  }
+  .quienes_somos h2, .quienes_somos p {
+    text-align: justify;
+  }
   .quienes_somos_presentacion {
     font-size: 1.5rem;
+    padding: 1rem 0rem;
+    text-align: left;
+  }
+  .fondo-nosotras {
+    align-items: flex-start;
+    padding-top: 13rem;
+    min-height: auto;
   }
   .presentacion {
     font-size: 1rem;

@@ -30,12 +30,31 @@
     flex: 1;
   }
 
+  .quienes_somos {
+  max-width: 900px; // ajustalo según el ancho que quieras
+  margin: 0 auto;   // centra el bloque horizontalmente
+  padding: 2rem;    // espacio interno lateral (mobile o pantallas grandes)
+  
+  h2, p {
+    text-align: justify; // asegurás que se mantenga alineado a la izquierda
+  }
+}
+
   .quienes_somos_presentacion {
     font-size: 1.5rem;
+    padding: 1rem 0rem;
+    text-align: left;
+  }
+
+  .fondo-nosotras {
+    align-items: flex-start;
+    padding-top: 13rem;
+    min-height: auto;
   }
 
   .presentacion {
     font-size: 1rem;
+   
   }
 
   .titulo {

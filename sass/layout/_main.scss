@@ -216,23 +216,23 @@ main {
     @extend %flex-column-center;
     position: relative;
     z-index: 1;
-    gap: 2rem;
-    padding: 7rem 12rem;
-    text-align: left;
+    gap: 0.1rem;
+    padding: 2.3rem 1rem;
+    text-align: justify;
     color: white; 
   }
 }
 
-
-
 .quienes_somos_presentacion {
   font-size: 2rem;
+  
 }
 
 .presentacion {
   font-size: 0.9rem;
   width: 90%;
   margin: 0 auto;
+  text-align: justify;
 }
 
 /* Contacto */

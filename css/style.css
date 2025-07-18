@@ -262,6 +262,57 @@ main {
   border-radius: 4px;
 }
 
+.contenedor-Cards-index {
+  display: flex;
+  flex-wrap: nowrap;
+  overflow-x: auto;
+  gap: 1rem;
+  padding: 0.5rem;
+  scroll-snap-type: x mandatory;
+  -webkit-overflow-scrolling: touch;
+  scrollbar-width: none;
+}
+.contenedor-Cards-index::-webkit-scrollbar {
+  display: none;
+}
+
+.card-ropa-index {
+  flex: 0 0 60%;
+  scroll-snap-align: start;
+  background: #ffffff;
+  padding: 0.5rem;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.1019607843);
+  border-radius: 6px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.card-ropa-index img {
+  width: 100%;
+  aspect-ratio: 3/4;
+  object-fit: cover;
+}
+.card-ropa-index h3,
+.card-ropa-index .card-ropa-precio-index p {
+  margin-top: 0.5rem;
+  font-size: 0.8rem;
+  font-family: inherit;
+}
+.card-ropa-index .card-ropa-precio-index span {
+  color: rgb(92, 92, 92);
+  font-size: 0.7rem;
+}
+.card-ropa-index button {
+  margin-top: auto;
+  padding: 0.3rem;
+  border: none;
+  background-color: rgb(230, 226, 215);
+  color: #000000;
+  cursor: pointer;
+  border-radius: 4px;
+  font-family: inherit;
+}
+
 /* Sobre nosotras */
 .quienes_somos {
   gap: 2rem;
@@ -427,8 +478,8 @@ footer {
     font-size: 8rem !important;
     bottom: 1rem;
   }
-  .creditos-banner {
-    font-size: 1rem;
+  .card-ropa-index {
+    flex: 0 0 21%;
   }
 }
 

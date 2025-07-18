@@ -133,6 +133,65 @@ main {
   border-radius: 4px;
 }
 
+.contenedor-Cards-index {
+  display: flex;
+  flex-wrap: nowrap;
+  overflow-x: auto;
+  gap: 1rem;
+  padding: 0.5rem;
+  scroll-snap-type: x mandatory;
+  -webkit-overflow-scrolling: touch;
+
+  // Quita el scrollbar en algunos navegadores
+  scrollbar-width: none;
+  &::-webkit-scrollbar {
+    display: none;
+  }
+}
+
+.card-ropa-index {
+  flex: 0 0 60%;
+  scroll-snap-align: start;
+  background: $color-blanco;
+  padding: 0.5rem;
+  box-shadow: 0 0 5px #0000001a;
+  border-radius: 6px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+
+  img {
+    width: 100%;
+    aspect-ratio: 3 / 4;
+    object-fit: cover;
+  }
+
+  h3,
+  .card-ropa-precio-index p {
+    margin-top: 0.5rem;
+    font-size: 0.8rem;
+    font-family: inherit;
+  }
+
+  .card-ropa-precio-index span {
+    color: rgb(92, 92, 92);
+    font-size: 0.7rem;
+  }
+
+  button {
+    margin-top: auto;
+    padding: 0.3rem;
+    border: none;
+    background-color: $color-beige;
+    color: $color-negro;
+    cursor: pointer;
+    border-radius: 4px;
+    font-family: inherit;
+  }
+}
+
+
+
 /* Sobre nosotras */
 .quienes_somos {
   @extend %flex-column-center;

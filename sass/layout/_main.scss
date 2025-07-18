@@ -193,12 +193,37 @@ main {
 
 
 /* Sobre nosotras */
-.quienes_somos {
-  @extend %flex-column-center;
-  gap: 2rem;
-  margin: 4rem 0;
-  padding: 0 1.5rem;
+.fondo-nosotras {
+  position: relative;
+  background-image: url('../../imgs/fondo_sobre_nosotras.jpeg');
+  background-size: cover;
+  background-position: top;
+  background-repeat: no-repeat;
+  overflow: hidden;
+ 
+
+  // capa de oscurecimiento
+  &::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background-color: rgba(0, 0, 0, 0.7); // ajustá la opacidad a gusto
+    z-index: 0;
+  }
+
+  // contenido visible sobre el fondo
+  .quienes_somos {
+    @extend %flex-column-center;
+    position: relative;
+    z-index: 1;
+    gap: 2rem;
+    padding: 4rem 2rem;
+    text-align: left;
+    color: white; // para que el texto se vea claro sobre el fondo oscuro
+  }
 }
+
+
 
 .quienes_somos_presentacion {
   font-size: 2rem;

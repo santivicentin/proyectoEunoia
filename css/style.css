@@ -1,4 +1,4 @@
-.footer-contenido, .contacto-wrapper, .quienes_somos, .nueva-temporada, .index-header-flex {
+.footer-contenido, .contacto-wrapper, .fondo-nosotras .quienes_somos, .nueva-temporada, .index-header-flex {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -314,10 +314,28 @@ main {
 }
 
 /* Sobre nosotras */
-.quienes_somos {
+.fondo-nosotras {
+  position: relative;
+  background-image: url("../../imgs/fondo_sobre_nosotras.jpeg");
+  background-size: cover;
+  background-position: top;
+  background-repeat: no-repeat;
+  overflow: hidden;
+}
+.fondo-nosotras::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-color: rgba(0, 0, 0, 0.7);
+  z-index: 0;
+}
+.fondo-nosotras .quienes_somos {
+  position: relative;
+  z-index: 1;
   gap: 2rem;
-  margin: 4rem 0;
-  padding: 0 1.5rem;
+  padding: 4rem 2rem;
+  text-align: left;
+  color: white;
 }
 
 .quienes_somos_presentacion {

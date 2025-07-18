@@ -214,10 +214,11 @@ main {
   // contenido visible sobre el fondo
   .quienes_somos {
     @extend %flex-column-center;
+    justify-content: center;
     position: relative;
     z-index: 1;
     gap: 0.1rem;
-    padding: 2.3rem 1rem;
+    padding: 5.5rem 1rem;
     text-align: justify;
     color: white; 
   }

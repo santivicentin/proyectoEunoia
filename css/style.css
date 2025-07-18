@@ -316,7 +316,7 @@ main {
 /* Sobre nosotras */
 .fondo-nosotras {
   position: relative;
-  background-image: url("../../imgs/fondo_sobre_nosotras.jpeg");
+  background-image: url("../imgs/fondo_sobre_nosotras.jpeg");
   background-size: cover;
   background-position: top;
   background-repeat: no-repeat;
@@ -333,7 +333,7 @@ main {
   position: relative;
   z-index: 1;
   gap: 2rem;
-  padding: 4rem 2rem;
+  padding: 7rem 12rem;
   text-align: left;
   color: white;
 }

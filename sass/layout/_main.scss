@@ -207,7 +207,7 @@ main {
     content: '';
     position: absolute;
     inset: 0;
-    background-color: rgba(0, 0, 0, 0.7); // ajustá la opacidad a gusto
+    background-color: rgba(0, 0, 0, 0.7); 
     z-index: 0;
   }
 
@@ -219,7 +219,7 @@ main {
     gap: 2rem;
     padding: 7rem 12rem;
     text-align: left;
-    color: white; // para que el texto se vea claro sobre el fondo oscuro
+    color: white; 
   }
 }
 
